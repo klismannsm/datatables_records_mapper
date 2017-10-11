@@ -20,8 +20,8 @@ module DatatablesRecordsMapper
 
     def records
       @records ||= begin
-        return @model.search(search_parameter, param_options) unless @options.has_key? :records
-        @model.search(@options[:records], search_parameter, param_options)
+      return @model.search(search_parameter, param_options) unless @options.has_key? :records
+      @model.search(@options[:records], search_parameter, param_options)
       end
     end
 
